@@ -1,9 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --background-dark-blue: hsl(217, 54%, 11%);
+  --card-dark-blue: hsl(216, 50%, 16%);
+  --line-dark-blue: hsl(215, 32%, 27%);
+  --font-default: 'Outfit', sans-serif;
+}
+
 *, *::after, *::before {
   box-sizing: inherit;
+  font-family: var(--font-default);
   margin: 0;
   padding: 0;
 }
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+
+.content {
+  align-items: center;
+  background-color: var(--background-dark-blue);
+  display: flex;
+  flex: row;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--card-dark-blue);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.2rem;
+}
+
+.card__image {
+  align-self: center;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  width: 30rem;
+}
+
+.card__text-box {
+  border-bottom: 1px solid var(--line-dark-blue);
+  padding-bottom: .3rem;
+}
+
+.card__text-box__title {
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.card__text-box__paragraph {
+  color: var(--soft-blue);
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  margin-bottom: 2.6rem;
+}
+
+.card__text-box__footer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2.1rem;
+}
+
+.card__text-box__footer__price {
+  color: var(--cyan);
+}
+
+.card__text-box__footer__time {
+  color: var(--soft-blue);
+}
+
+.card__text-box__footer__price, .card__text-box__footer__time {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+  justify-content: flex-start;
+}
+
+.card__text-box__footer__price span, .card__text-box__footer__time span {
+  font-weight: 600;
+  margin-left: .8rem;
+}
+
+.card__footer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 1.7rem;
+}
+
+.card__footer__img {
+  border-radius: 100%;
+  border: .1rem solid var(--white);
+  width: 3.2rem;
+}
+
+.card__footer__text {
+  color: var(--soft-blue);
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-left: 1.5rem;
+}
+
+.card__footer__text--white {
+  color: var(--white);
 }
